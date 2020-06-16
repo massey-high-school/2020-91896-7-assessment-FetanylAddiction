@@ -1,32 +1,21 @@
-def input_check(question, error_msg, num_ok):
-    error = error_msg
+# Number Checking Function
+def int_check(question, low, high):
+    error = "Please enter an number that is between {} and {}".format(low, high)
 
     valid = False
     while not valid:
-        response = input(question)
-        has_errors = ""
+        try:
+            response = int(input(question))
 
-        if num_ok != "yes":
-            # Looks for Letters and blanks in response and complains if necessary
-            for letter in response:
-                if letter.isalpha():
-                    has_errors = "yes"
-                    break
-        if int(response) > 5:
-            print(error)
-            continue
-        elif int(response) < 0:
-            print(error)
-        elif response == "":
-            print(error)
-            continue
-        elif has_errors != "":
-            print(error)
-            continue
-        else:
-            return response
+            if low <= response <= high:
+                return response
+            else:
 
+                print(error)
 
-dimension = input_check("Please enter in a  number that corresponds with a shape",
-                        "Please enter in a valid number",
-                        "yes")
+        except ValueError:
+            print(error)
+
+# Main Routine
+
+var_num = int_check("Enter a number between 1 and 4: ", 1, 4)
