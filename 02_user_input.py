@@ -20,27 +20,27 @@ def int_check(question, low, high):
 
 def square():
     if var_num == 1:
-        print("Square")
+        return "Square"
 
 
 def rectangle():
     if var_num == 2:
-        print("Rectangle")
+        return "Rectangle"
 
 
 def triangle():
     if var_num == 3:
-        print("Triangle")
+        return "Triangle"
 
 
 def circle():
     if var_num == 4:
-        print("Circle")
+        return "Circle"
 
 
 # Main Routine
-print("Please select one of the corresponding",
-      "numbers provided to choose a shape")
+print("Please choose one of the numbers below to select a number")
+
 print()
 print("Square = 1")
 print("Rectangle = 2")
@@ -49,4 +49,18 @@ print("Circle = 4")
 print()
 var_num = int_check("Please Select a shape: ", 1, 4)
 
-print("You have selected: {}".format(square(), rectangle(), triangle(), circle()))
+answer = ""
+
+if var_num == 1:
+    answer = square()
+
+if var_num == 2:
+    answer = rectangle()
+
+if var_num == 3:
+    answer = triangle()
+
+if var_num == 4:
+    answer = circle()
+
+print("You have selected: {}".format(answer))
