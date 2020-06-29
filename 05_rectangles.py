@@ -1,7 +1,5 @@
 # **** Functions ****
 
-# shape ask function:
-
 
 # square height and base function
 
@@ -9,7 +7,7 @@ def rectangle_formula():
     width = float(input("Width length?: "))
     height = float(input("Height length?: "))
     var_area = width * height
-    var_perimeter = width + height * 2
+    var_perimeter = (width + height) * 2
 
     return [var_area, var_perimeter]
 
@@ -23,9 +21,9 @@ print("You chose:", shape)
 
 if shape == "rectangle":
     rectangle_ans = rectangle_formula()
-    area = rectangle_ans[0]
-    perimeter = rectangle_ans[1]
-    print(rectangle_ans, perimeter, area)
+    area = rectangle_ans
+    perimeter = rectangle_ans
+    print(rectangle_ans)
 
 elif shape == "rectangle":
     print("you have selected rectangle")
