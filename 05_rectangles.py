@@ -21,9 +21,9 @@ print("You chose:", shape)
 
 if shape == "rectangle":
     rectangle_ans = rectangle_formula()
-    area = rectangle_ans
-    perimeter = rectangle_ans
-    print(rectangle_ans)
+    area = rectangle_ans[0]
+    perimeter = rectangle_ans[1]
+    print("Area: {:.2f} | Perimeter: {:.2f}".format(area, perimeter))
 
 elif shape == "rectangle":
     print("you have selected rectangle")
