@@ -9,7 +9,7 @@ def triangle_formula():
     height = float(input("Height length?: "))
     length = float(input("Base Length?"))
     var_area = length / 2 * height
-    var_perimeter = length + height * 2
+    var_perimeter = height * 2 + length
 
     return [var_area, var_perimeter]
 
