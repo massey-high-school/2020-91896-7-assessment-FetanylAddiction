@@ -1,22 +1,28 @@
-# input checker function
+# shape input
 
 
-def int_check(question, low, high):
-    error = "Please enter an number that is between {} and {}".format(low, high)
-
+def string_checker(question, to_check):
     valid = False
     while not valid:
-        try:
-            response = int(input(question))
 
-            if low <= response <= high:
+        response = input(question).lower()
+
+        for item in to_check:
+            if response == item:
                 return response
-            else:
+            elif response == item[0]:
+                return item
 
-                print(error)
+        print("sorry that is not a valid response")
 
-        except ValueError:
-            print(error)
+
+# *** Main Routine starts here ***
+
+yes_no = ["square", "rectangle", "triangle", "circle"]
+
+shape = string_checker("Choose a shape ", yes_no)
+
+print("You chose:", shape)
 
 
 # square input
@@ -70,7 +76,6 @@ def circle_formula():
 
 # Main Routine
 
-var_num = int_check("Enter a number between 1 and 4: ", 1, 4)
 
 valid_shapes = ["square", "rectangle", "triangle", "circle"]
 
