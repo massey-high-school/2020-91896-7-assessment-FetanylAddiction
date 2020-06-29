@@ -23,6 +23,7 @@ if shape == "square":
     square_ans = square_formula()
     area = square_ans[0]
     perimeter = square_ans[1]
+    print(square_ans)
 
 elif shape == "rectangle":
-    print("I'm a rectangle")
+    print()
