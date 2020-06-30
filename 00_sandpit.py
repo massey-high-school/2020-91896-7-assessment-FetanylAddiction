@@ -24,3 +24,31 @@ if name == 'main':
 
 for item in big_list:
     print(item)
+
+# random list thingy
+big_list = []
+
+shape = ""
+if shape == 'main':
+    while shape != "xxx":
+
+        row_list = []
+
+        shape = input("what is your shape?: ")
+        if name.lower() == "xxx":
+            break
+
+        base = int(input("what is your base?: "))
+        width = input("what is your width?:")
+
+        row_list.append(name)
+        row_list.append(base)
+        row_list.append(width)
+
+        big_list.append(row_list)
+
+# output data..
+# see last video of epub for sorting
+
+for item in big_list:
+    print(item)
