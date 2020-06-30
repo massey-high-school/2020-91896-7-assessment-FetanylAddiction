@@ -1,4 +1,6 @@
-# Num_check
+# ***** Functions *****
+
+# Num_check function
 
 
 def num_check(question):
@@ -18,7 +20,8 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# shape input/ string checker
+
+# shape input & string checker function
 
 
 def string_checker(question, to_check):
@@ -36,15 +39,7 @@ def string_checker(question, to_check):
         print("sorry that is not a valid response")
 
 
-yes_no = ["square", "rectangle", "triangle", "circle"]
-print("[Square][Rectangle][Triangle][Circle]")
-print()
-shape = string_checker("Choose a shape ", yes_no)
-
-print("You chose:", shape)
-
-
-# square input
+# square input function
 
 # Ask user for the squares side length and calculates it
 def square_formula():
@@ -55,7 +50,7 @@ def square_formula():
     return [var_area, var_perimeter]
 
 
-# rectangle input
+# rectangle input function
 
 # Ask user for the rectangle's length and height and calculates it
 def rectangle_formula():
@@ -67,7 +62,7 @@ def rectangle_formula():
     return [var_area, var_perimeter]
 
 
-# triangle input
+# triangle input function
 
 # Ask user for the base and height and calculates it
 def triangle_formula():
@@ -79,7 +74,7 @@ def triangle_formula():
     return [var_area, var_perimeter]
 
 
-# circle input
+# circle input function
 pi = 3.14
 
 
@@ -94,6 +89,14 @@ def circle_formula():
 
 # ***** Main Routine *****
 
+yes_no = ["square", "rectangle", "triangle", "circle"]
+shape_list = ["Square", "Rectangle", "Triangle", "Circle"]
+
+print(shape_list)
+print()
+
+shape = string_checker("Choose a shape: ", yes_no)
+print("You chose:", shape)
 
 valid_shapes = ["square", "rectangle", "triangle", "circle"]
 
@@ -132,3 +135,4 @@ if shape == "circle":
     area = circle_ans[0]
     perimeter = circle_ans[1]
     print("Area: {:.2f} | Perimeter: {:.2f}".format(area, perimeter))
+
