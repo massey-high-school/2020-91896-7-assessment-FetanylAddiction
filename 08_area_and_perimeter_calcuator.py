@@ -22,8 +22,6 @@ def num_check(question):
 
 
 # shape input & string checker function
-
-
 def string_checker(question, to_check):
     valid = False
     while not valid:
@@ -75,6 +73,7 @@ def triangle_formula():
 
 
 # circle input function
+
 pi = 3.14
 
 
@@ -89,6 +88,10 @@ def circle_formula():
 
 # ***** Main Routine *****
 
+# list printing system
+
+# print statements and shape identifiers
+
 yes_no = ["square", "rectangle", "triangle", "circle"]
 shape_list = ["Square", "Rectangle", "Triangle", "Circle"]
 
@@ -98,11 +101,10 @@ print()
 shape = string_checker("Choose a shape: ", yes_no)
 print("You chose:", shape)
 
-valid_shapes = ["square", "rectangle", "triangle", "circle"]
-
 # square response
 
 # Prints square calculator results into a list with a max of two decimal points
+
 if shape == "square":
     square_ans = square_formula()
     area = square_ans[0]
