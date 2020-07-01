@@ -52,3 +52,16 @@ if shape == 'main':
 
 for item in big_list:
     print(item)
+
+
+if shape == 'square':
+    print(shape_response())
+
+if shape == 'rectangle':
+    print(shape_response())
+
+if shape == 'triangle':
+    print(shape_response())
+
+if shape == 'circle':
+    print(shape_response())
