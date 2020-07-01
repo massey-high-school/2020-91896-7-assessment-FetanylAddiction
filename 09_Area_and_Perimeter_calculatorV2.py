@@ -1,8 +1,11 @@
-# ***** Functions *****
+
+# print statements and shape identifiers
+
+
+# put functions here
+
 
 # Num_check function
-
-
 def num_check(question):
     error = "Please enter a number that is more than zero"
 
@@ -39,7 +42,7 @@ def string_checker(question, to_check):
 
 # square input function
 
-def shape_formula():
+def shape_formula(shape):
     if shape == "square":
         side = num_check("Side length?")
         var_area = side * side
@@ -72,9 +75,9 @@ def shape_formula():
         return [var_area, var_perimeter]
 
 
-def shape_response():
+def shape_response(shape):
     if shape == "square":
-        square_ans = shape_formula()
+        square_ans = shape_formula(shape)
         area = square_ans[0]
         perimeter = square_ans[1]
         print("Area: {:.2f} | Perimeter: {:.2f}".format(area, perimeter))
@@ -98,29 +101,32 @@ def shape_response():
         print("Area: {:.2f} | Perimeter: {:.2f}".format(area, perimeter))
 
 
-# ***** Main Routine *****
-
-# list printing system
-
-# print statements and shape identifiers
-
-yes_no = ["square", "rectangle", "triangle", "circle"]
-shape_list = ["Square", "Rectangle", "Triangle", "Circle"]
+# ******* Main routine starts here ******
+yes_no = ["square", "rectangle", "triangle", "circle", "xxx"]
+shape_list = ["Square", "Rectangle", "Triangle", "Circle", "xxx"]
 
 print(shape_list)
 print()
 
-shape = string_checker("Choose a shape: ", yes_no)
-print("You chose:", shape)
+# List printer
+big_list = []
 
-if shape == 'square':
-    print(shape_response())
+var_shape = ""
+while var_shape.lower() != "xxx":
+    var_shape = string_checker("Choose a shape: ", yes_no)
 
-if shape == 'rectangle':
-    print(shape_response())
+    print("You chose:", var_shape)
 
-if shape == 'triangle':
-    print(shape_response())
+    small_list = []
+    # ask_user = shape_formula(var_shape)
+    shape_calculation = shape_response(var_shape)
 
-if shape == 'circle':
-    print(shape_response())
+    small_list.append(ask_user)
+    small_list.append(shape_calculation)
+
+    big_list.append(small_list)
+  # add small list to large list
+
+
+print(big_list)
+# Output large list here so that it looks nice
