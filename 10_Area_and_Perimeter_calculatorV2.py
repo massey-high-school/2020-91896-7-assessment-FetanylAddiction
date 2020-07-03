@@ -1,6 +1,9 @@
 # put functions here
 
+# number checker function
 
+
+# number checking function
 def num_check(question):
     error = "Please enter a number that is more than zero"
 
@@ -39,7 +42,7 @@ def string_checker(question, to_check):
 
 # Ask user for the squares side length and calculates it
 def square_formula():
-    side = num_check("Side length?")
+    side = num_check("Side length?: ")
     var_area = side * side
     var_perimeter = side * 4
 
