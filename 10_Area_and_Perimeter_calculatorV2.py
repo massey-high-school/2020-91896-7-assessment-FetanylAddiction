@@ -90,6 +90,12 @@ def circle_formula():
 # ******* Main routine starts here ******
 yes_no = ["square", "rectangle", "triangle", "circle", "xxx"]
 shape_list = ["Square", "Rectangle", "Triangle", "Circle"]
+exit_code = ["xxx"]
+print()
+print("Please select from Square, Rectangle, Triangle and Circle.")
+print("Once you have finished entering your one or more shape's dimensions",
+      "please use the exit code 'xxx'")
+print()
 
 # Make large empty list here
 big_list = []
@@ -134,12 +140,15 @@ while shape.lower() != "xxx":
         perimeter = circle_ans[1]
         print("Area: {:.2f} | Perimeter: {:.2f}".format(area, perimeter))
 
+    if shape == "xxx":
+        break
+
     # add stuff to small list
     small_list.append(shape)
     small_list.append(area)
     small_list.append(perimeter)
-    # add small list to large list
 
+    # add small list to large list
     big_list.append(small_list)
 
 print(big_list)
